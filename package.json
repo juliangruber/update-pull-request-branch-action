@@ -1,0 +1,27 @@
+{
+  "name": "update-pull-request-branch-action",
+  "private": true,
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Update a Pull Request from its origin branch",
+  "repository": "juliangruber/update-pull-request-branch-action",
+  "scripts": {
+    "test": "prettier-standard index.js && standard index.js",
+    "build": "ncc build index.js",
+    "version": "npm run build && git add dist",
+    "release": "np && git tag -f v1 && git push --tags -f"
+  },
+  "np": {
+    "publish": false
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^1.1.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.5",
+    "np": "^5.1.3",
+    "prettier-standard": "^15.0.1",
+    "standard": "^14.3.1"
+  }
+}

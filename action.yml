@@ -1,0 +1,16 @@
+name: Update Pull Request branch
+author: juliangruber
+description: 'Update a Pull Request from its origin branch'
+branding:
+  icon: 'git-pull-request'
+  color: purple
+inputs:
+  github-token:
+    description: 'GitHub Token'
+    required: true
+  number:
+    description: 'Pull Request number'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
