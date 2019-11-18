@@ -1,6 +1,6 @@
 name: Update Pull Request branch
 author: juliangruber
-description: 'Update a Pull Request from its origin branch'
+description: 'Update a Pull Request from its base branch'
 branding:
   icon: 'git-pull-request'
   color: purple
