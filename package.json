@@ -1,7 +1,7 @@
 {
   "name": "update-pull-request-branch-action",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "Update a Pull Request from its origin branch",
   "repository": "juliangruber/update-pull-request-branch-action",
