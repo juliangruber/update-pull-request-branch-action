@@ -19,7 +19,8 @@ const main = async () => {
 
   await octokit.pulls.updateBranch({
     ...context.repo,
-    pull_number: number
+    pull_number: number,
+    expected_head_sha: oldSha
   })
 
   while (true) {
