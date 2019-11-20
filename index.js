@@ -10,18 +10,23 @@ const main = async () => {
   const number = core.getInput('number')
 
   const octokit = new GitHub(token)
-  const pullArgs = {
+
+  const res = await octokit.pulls.get({
     ...context.repo,
     pull_number: number
-  }
-
-  const res = await octokit.pulls.get(pullArgs)
+  })
   const oldSha = res.data.head.sha
 
-  await octokit.pulls.updateBranch(pullArgs)
+  await octokit.pulls.updateBranch({
+    ...context.repo,
+    pull_number: number
+  })
 
   while (true) {
-    const res = await octokit.pulls.get(pullArgs)
+    const res = await octokit.pulls.get({
+      ...context.repo,
+      pull_number: number
+    })
     if (res.data.head.sha !== oldSha) return
 
     core.debug('sleep')
