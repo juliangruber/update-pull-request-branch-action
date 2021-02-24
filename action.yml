@@ -10,7 +10,7 @@ inputs:
     required: true
   number:
     description: 'Pull Request number'
-    required: true
+    required: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
