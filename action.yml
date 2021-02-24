@@ -5,16 +5,9 @@ branding:
   icon: 'git-pull-request'
   color: purple
 inputs:
-  github-token:
+  github_token:
     description: 'GitHub Token'
     required: true
-  number:
-    description: 'Pull Request number'
-    required: false
-  wait:
-    description: 'Wait for rebasing to complete?'
-    required: false
-    default: true
 runs:
   using: 'node12'
   main: 'dist/index.js'
