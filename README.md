@@ -1,19 +1,15 @@
 # update-pull-request-branch-action
 
-Update a Pull Request from its base branch.
-
-After updating it waits until the branch has been successfully updated,
-as the REST api route [doesn't](https://developer.github.com/v3/pulls/#response-3).
+Update all pull requests when the base branch receives a push
 
 ## Usage
 
 ```yaml
 steps:
   - name: Update Pull Request
-    uses: juliangruber/update-pull-request-branch-action@v1
+    uses: Tantalon/update-pull-request-branch-action@v1.1.1
     with:
-      number: 1
-      github-token: ${{ secrets.GITHUB_TOKEN }}
+      github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ## License
