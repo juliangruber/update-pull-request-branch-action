@@ -14,7 +14,7 @@ const main = async () => {
 
   let numbers
   if (numberInput != null) {
-    numbers = [ numberInput ]
+    numbers = [numberInput]
   } else {
     const listRes = await octokit.pulls.list({
       ...context.repo,
@@ -22,8 +22,8 @@ const main = async () => {
     })
     numbers = listRes.data.map(pull => pull.number)
   }
-  
-  for(const number of numbers) {
+
+  for (const number of numbers) {
     const res = await octokit.pulls.get({
       ...context.repo,
       pull_number: number
