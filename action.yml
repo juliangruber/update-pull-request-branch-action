@@ -11,10 +11,10 @@ inputs:
   number:
     description: 'Pull Request number'
     required: false
-  async:
-    description: 'Run asynchronously or not'
+  waitForPullRequestUpdated:
+    description: 'Wait for the pull request to update before returning'
     required: false
-    default: false
+    default: true
 runs:
   using: 'node12'
   main: 'dist/index.js'

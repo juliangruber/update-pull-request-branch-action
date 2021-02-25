@@ -17,13 +17,13 @@ steps:
       github-token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-To update all pull requests asynchronously:
+To update all pull requests without waiting:
 ```yaml
 steps:
   - name: Update All Pull Requests
     uses: juliangruber/update-pull-request-branch-action@v1
     with:
-      async: true
+      waitForPullRequestUpdated: false
       github-token: ${{ secrets.GITHUB_TOKEN }}
 ```
 

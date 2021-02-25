@@ -9,7 +9,7 @@ const main = async () => {
   // GitHub token, also check underscore notation for console testing
   const token = core.getInput('github-token') || core.getInput('github_token')
   const number = core.getInput('number')
-  const asyncFlag = core.getInput('async') === 'true'
+  const waitForPullRequestUpdated = core.getInput('waitForPullRequestUpdated') === 'true'
 
   const octokit = new GitHub(token)
 
@@ -43,7 +43,7 @@ const main = async () => {
         expected_head_sha: oldSha
       })
 
-      if (!asyncFlag) {
+      if (waitForPullRequestUpdated) {
         let prUpdated = false
         while (!prUpdated) {
           core.debug('sleep')
