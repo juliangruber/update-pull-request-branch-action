@@ -33,7 +33,7 @@ const main = async () => {
     const prMergeable = res.data.mergeable
     const prMergeableState = res.data.mergeable_state
 
-    // merge automatically if pull request is outdated and checks have passed
+    // update pull request only if it's outdated and there are no conflicts
     if (prMergeable && prMergeableState === 'behind') {
       core.info(`Updating pull request ${number}`)
 
