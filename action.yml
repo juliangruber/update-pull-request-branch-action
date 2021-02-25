@@ -5,9 +5,16 @@ branding:
   icon: 'git-pull-request'
   color: purple
 inputs:
-  github_token:
+  github-token:
     description: 'GitHub Token'
     required: true
+  number:
+    description: 'Pull Request number'
+    required: false
+  async:
+    description: 'Run asynchronously or not'
+    required: false
+    default: false
 runs:
   using: 'node12'
   main: 'dist/index.js'
