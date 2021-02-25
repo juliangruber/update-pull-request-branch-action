@@ -44,8 +44,7 @@ const main = async () => {
       })
 
       if (waitForPullRequestUpdated) {
-        let prUpdated = false
-        while (!prUpdated) {
+        while (true) {
           core.debug('sleep')
           await sleep(1000)
 
@@ -53,7 +52,8 @@ const main = async () => {
             ...context.repo,
             pull_number: number
           })
-          prUpdated = res.data.head.sha !== oldSha
+
+          if (res.data.head.sha !== oldSha) break
         }
       }
     } else {
