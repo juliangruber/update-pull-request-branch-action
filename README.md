@@ -17,7 +17,7 @@ steps:
       github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-To update all pull requests without waiting:
+To update all open pull requests without waiting:
 ```yaml
 steps:
   - name: Update All Pull Requests
