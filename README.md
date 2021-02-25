@@ -1,6 +1,6 @@
 # update-pull-request-branch-action
 
-Update pull requests when their base branches change.
+Update a Pull Request from its base branch.
 
 Optionally waits until the branch has been successfully updated,
 as the REST api route [doesn't](https://developer.github.com/v3/pulls/#response-3).
