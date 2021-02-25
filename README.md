@@ -2,7 +2,7 @@
 
 Update pull requests when their base branches change.
 
-Optionally, waits until the branch has been successfully updated,
+Optionally waits until the branch has been successfully updated,
 as the REST api route [doesn't](https://developer.github.com/v3/pulls/#response-3).
 
 ## Usage
