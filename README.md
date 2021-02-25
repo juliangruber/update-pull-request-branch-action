@@ -14,7 +14,7 @@ steps:
     uses: juliangruber/update-pull-request-branch-action@v1
     with:
       number: 1
-      github-token: ${{ secrets.GITHUB_TOKEN }}
+      github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 To update all pull requests without waiting:
@@ -24,7 +24,7 @@ steps:
     uses: juliangruber/update-pull-request-branch-action@v1
     with:
       waitForPullRequestUpdated: false
-      github-token: ${{ secrets.GITHUB_TOKEN }}
+      github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 ## License

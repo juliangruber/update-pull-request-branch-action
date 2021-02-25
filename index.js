@@ -6,8 +6,7 @@ const { GitHub, context } = require('@actions/github')
 const sleep = dt => new Promise(resolve => setTimeout(resolve, dt))
 
 const main = async () => {
-  // GitHub token, also check underscore notation for console testing
-  const token = core.getInput('github-token') || core.getInput('github_token')
+  const token = core.getInput('github_token')
   const number = core.getInput('number')
   const waitForPullRequestUpdated =
     core.getInput('waitForPullRequestUpdated') === 'true'
